@@ -6,28 +6,37 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { faker } from "@faker-js/faker";
 import CommentDetail from "./CommentDetail";
+import ApprovalCard from "./ApprovalCard";
 
 const App = () => {
   return (
     <div className="ui container comments">
-      <CommentDetail
-        author="Dayo"
-        date="Yesterday 7:00pm"
-        text="This is beautiful, you inspire me"
-        img={faker.image.avatar()}
-      />
-      <CommentDetail
-        author="Folu"
-        date="Yesterday 7:40pm"
-        text="This is calm"
-        img={faker.image.avatar()}
-      />
-      <CommentDetail
-        author="Bisola"
-        date="Yesterday 11:00pm"
-        text="Wow! nice"
-        img={faker.image.avatar()}
-      />
+      <ApprovalCard>
+        <CommentDetail
+          author="Dayo"
+          date="Yesterday 7:00pm"
+          text="This is beautiful, you inspire me"
+          img={faker.image.avatar()}
+        />
+      </ApprovalCard>
+
+      <ApprovalCard>
+        <CommentDetail
+          author="Folu"
+          date="Yesterday 7:40pm"
+          text="This is calm"
+          img={faker.image.avatar()}
+        />
+      </ApprovalCard>
+
+      <ApprovalCard>
+        <CommentDetail
+          author="Bisola"
+          date="Yesterday 11:00pm"
+          text="Wow! nice"
+          img={faker.image.avatar()}
+        />
+      </ApprovalCard>
     </div>
   );
 };
